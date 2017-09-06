@@ -1,7 +1,7 @@
 from methylation_percentage import*
 from collections import defaultdict
 
-chip_seq_file='/mnt/lab_data/kundaje/manyu/Phase1data/ChipSeq/NFATC3/NFATC3_K562_optimal_idr_mainChroms.bed'
+chip_seq_file='/mnt/lab_data/kundaje/manyu/ChipSeq/CEBPB_narrowPeak_peaks_mainChrom.bed'
 with open(chip_seq_file,'r') as f:
     data=[tuple(line.strip().split('\t')) for line in f]
 
@@ -16,7 +16,7 @@ for interval in data:
 # import IPython
 # IPython.embed()
 
-f=open('methylation_intervals_NFATC3.bed','w')
+f=open('methylation_intervals_CEBPB.bed','w')
 
 for key in methylation_interval_dict.keys():
 	f.write(key[0]+'\t'+str(key[1])+'\t'+str(key[2])+'\t'+str(methylation_interval_dict[key][0]) \

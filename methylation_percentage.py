@@ -40,12 +40,12 @@ def methylation_percentage(region,start,end):
     nan_to_zero(data_methylation)
     sum_gc=np.sum(data_methylation)
     if count_gc>0:
-        print("Returning total CpG,Fraction of methylated Cpg,Fraction of Methylated sites \n")
-        print("#CpG,Total Methylation/#CpG,Total Methylation/Total Sites \n")
+        # print("Returning total CpG,Fraction of methylated Cpg,Fraction of Methylated sites \n")
+        # print("#CpG,Total Methylation/#CpG,Total Methylation/Total Sites \n")
         return count_gc,sum_gc/count_gc,sum_gc/len(sequence)
     
     else:
-        print("No CpG found")
+        return 0,0.0,0.0
 
 
 # upper=200000
