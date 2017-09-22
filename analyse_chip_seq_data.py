@@ -21,7 +21,7 @@ class ChipSeq_file_methylation(object):
 		self.path=path
 		self.methylation_interval_dict=defaultdict(float)
 		self.fasta_file=FastaFile('/mnt/data/annotations/by_organism/human/hg20.GRCh38/GRCh38.genome.fa')
-		self.bw_filtered=pyBigWig.open('/mnt/lab_data/kundaje/manyu/Methylation_data/K562_wgbs_filtered.bigWig')
+		self.bw_filtered=pyBigWig.open('/srv/scratch/manyu/Methylation_data/H1-hESC/H1_hESC_rep2.bigWig')
 		self.chrom_names_path='/mnt/data/annotations/by_release/hg20.GRCh38/chrom.names_short'
 		with open(self.chrom_names_path,'rb') as f:
 			self.chrom_names=[line.strip('\n') for line in f]
@@ -102,8 +102,12 @@ class ChipSeq_file_methylation(object):
 		methylation_data_list=[]  #List version of the methylation_dict
 		#print len(methylation_data_list)
 		for key in self.methylation_interval_dict:
-			data_=tuple(list(key)+list(self.methylation_interval_dict[key]))
-			methylation_data_list.append(data_)
+			try:
+				data_=tuple(list(key)+list(self.methylation_interval_dict[key]))
+				methylation_data_list.append(data_)
+			except:
+				pass
+				
 		methylation_data_list=sorted(methylation_data_list,key=lambda x: -1*x[4])
 		with open(self.write_path,'wb') as f:
 			for line in methylation_data_list:
@@ -119,13 +123,15 @@ class ChipSeq_file_methylation(object):
 if __name__=='__main__':
 	#path='/srv/scratch/manyu/NIPS_workshop_tests/test.bed'
 	#path='/mnt/lab_data/kundaje/manyu/ChipSeq/CEBPB_narrowPeak_peaks_mainChrom.bed'
-	path='/srv/scratch/manyu/data/hg38/K562/ENCSR000FAU/released/GRCh38/optimal_idr_thresholded_peaks/bed/narrowpeak/rep1_rep2/ENCFF747ICD.bed.gz'
+	#path='/srv/scratch/manyu/data/hg38/K562/ENCSR000FAU/released/GRCh38/optimal_idr_thresholded_peaks/bed/narrowpeak/rep1_rep2/ENCFF747ICD.bed.gz'
 	#path_to_write='/srv/scratch/manyu/NIPS_workshop_tests/CEBPB_methylation_sorted_test'
-	path_to_write='/srv/scratch/manyu/NIPS_workshop_tests/test_gzip_ENCSR000FAU'
+	#path_to_write='/srv/scratch/manyu/NIPS_workshop_tests/test_gzip_ENCSR000FAU'
 	#ChipSeq_file_methylation(path, path_to_write).write_to_file()
-        path='/srv/scratch/manyu/data/hg38/K562/ENCSR000BKH/released/GRCh38/optimal_idr_thresholded_peaks/bed/narrowpeak/rep1_rep2/ENCFF496YJC.bed.gz'
-        path_to_write='/srv/scratch/manyu/NIPS_workshop_tests/test_gzip_ENCSR000BKH'
-        ChipSeq_file_methylation(path, path_to_write).write_to_file()	
+        #path='/srv/scratch/manyu/data/hg38/K562/ENCSR000BKH/released/GRCh38/optimal_idr_thresholded_peaks/bed/narrowpeak/rep1_rep2/ENCFF496YJC.bed.gz'
+        #path_to_write='/srv/scratch/manyu/NIPS_workshop_tests/test_gzip_ENCSR000BKH'
+        path='/srv/scratch/manyu/NIPS_workshop_tests/chrom_sizes_broken.bed'
+	path_to_write='/srv/scratch/manyu/NIPS_workshop_tests/chrom_sizes_methylation_processed_H1hESC_rep2'
+	ChipSeq_file_methylation(path, path_to_write).write_to_file()	
 
 
 
