@@ -47,19 +47,19 @@ if __name__=='__main__':
     input_file='/srv/scratch/manyu/Methylation_data/K562/MethCpG_rep1.bedMethyl.gz'
     output_file='/srv/scratch/manyu/Methylation_data/K562/MethCpG_rep1_filtered.bedMethyl'
     process_data_10_reads(input_file,output_file)
-    inputfile='/srv/scratch/manyu/Methylation_data/K562/MethCpG_rep2.bedMethyl.gz'
+    input_file='/srv/scratch/manyu/Methylation_data/K562/MethCpG_rep2.bedMethyl.gz'
     output_file='/srv/scratch/manyu/Methylation_data/K562/MethCpG_rep2_filtered.bedMethyl'
     process_data_10_reads(input_file,output_file)
     input_file='/srv/scratch/manyu/Methylation_data/GM12878/MethCpG_rep1.bedMethyl.gz'
     output_file='/srv/scratch/manyu/Methylation_data/GM12878/MethCpG_rep1_filtered.bedMethyl'
     process_data_10_reads(input_file,output_file)
-    inputfile='/srv/scratch/manyu/Methylation_data/GM12878/MethCpG_rep2.bedMethyl.gz'
+    input_file='/srv/scratch/manyu/Methylation_data/GM12878/MethCpG_rep2.bedMethyl.gz'
     output_file='/srv/scratch/manyu/Methylation_data/GM12878/MethCpG_rep2_filtered.bedMethyl'
     process_data_10_reads(input_file,output_file)
     input_file='/srv/scratch/manyu/Methylation_data/H1-hESC/MethCpG_rep1.bedMethyl.gz'
     output_file='/srv/scratch/manyu/Methylation_data/H1-hESC/MethCpG_rep1_filtered.bedMethyl'
     process_data_10_reads(input_file,output_file)
-    inputfile='/srv/scratch/manyu/Methylation_data/H1-hESC/MethCpG_rep2.bedMethyl.gz'
+    input_file='/srv/scratch/manyu/Methylation_data/H1-hESC/MethCpG_rep2.bedMethyl.gz'
     output_file='/srv/scratch/manyu/Methylation_data/H1-hESC/MethCpG_rep2_filtered.bedMethyl'
     process_data_10_reads(input_file,output_file)
     
