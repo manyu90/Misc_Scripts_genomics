@@ -21,7 +21,7 @@ class ChipSeq_file_methylation(object):
         self.path=path
         self.methylation_interval_dict=defaultdict(float)
         self.fasta_file=FastaFile('/mnt/data/annotations/by_organism/human/hg20.GRCh38/GRCh38.genome.fa')
-        self.bw_filtered=pyBigWig.open('/srv/scratch/manyu/Methylation_data/H1-hESC/H1_hESC_rep2.bigWig')
+        self.bw_filtered=pyBigWig.open('/srv/scratch/manyu/Methylation_data/K562/MethCpG_rep1.bigWig')
         self.chrom_names_path='/mnt/data/annotations/by_release/hg20.GRCh38/chrom.names_short'
         with open(self.chrom_names_path,'rb') as f:
             self.chrom_names=[line.strip('\n') for line in f]
@@ -86,7 +86,8 @@ class ChipSeq_file_methylation(object):
             
             else:
                 return 0,0.0,0.0
-        except:
+        except Exception as e:
+            print(e)
             pass
                 
 
@@ -94,10 +95,15 @@ class ChipSeq_file_methylation(object):
     
 
     def calculate_methylation(self):
+        count=0
         for interval in self.data_lines:
             region,start,end =interval[0],int(interval[1]),int(interval[2])
+            
             if region in self.chrom_names:
                 self.methylation_interval_dict[(region,start,end)]=self.methylation_percentage(region,start,end)
+                print("Processed interval %s \n"%str(interval))
+                print(count)
+                count+=1
             else:
                 continue
             #print "interval \t %s"%(str(interval))
@@ -108,14 +114,15 @@ class ChipSeq_file_methylation(object):
     def write_to_file(self):
         self.calculate_methylation()  #Calculating meylation, populating the dictionary
         methylation_data_list=[]  #List version of the methylation_dict
-        #print len(methylation_data_list)
+        print("len_dict \t",len(self.methylation_interval_dict))
         for key in self.methylation_interval_dict:
             try:
                 data_=tuple(list(key)+list(self.methylation_interval_dict[key]))
                 methylation_data_list.append(data_)
-            except:
+            except Exception as e:
+                print(e)
                 pass
-                
+        print ("len",len(methylation_data_list))       
         methylation_data_list=sorted(methylation_data_list,key=lambda x: -1*x[4])
         with open(self.write_path,'wb') as f:
             for line in methylation_data_list:
@@ -137,8 +144,8 @@ if __name__=='__main__':
     #ChipSeq_file_methylation(path, path_to_write).write_to_file()
     #path='/srv/scratch/manyu/data/hg38/K562/ENCSR000BKH/released/GRCh38/optimal_idr_thresholded_peaks/bed/narrowpeak/rep1_rep2/ENCFF496YJC.bed.gz'
     #path_to_write='/srv/scratch/manyu/NIPS_workshop_tests/test_gzip_ENCSR000BKH'
-    path='/srv/scratch/manyu/NIPS_workshop_tests/chrom_sizes_broken.bed'
-    path_to_write='/srv/scratch/manyu/NIPS_workshop_tests/chrom_sizes_methylation_processed_H1hESC_rep2'
+    path='/mnt/lab_data/kundaje/manyu/DNAse/K562-DNase-Reprocessed.IDR0.1.hg38_intervals.bed'
+    path_to_write='/srv/scratch/manyu/NIPS_workshop_tests/dnase_test'
     ChipSeq_file_methylation(path, path_to_write).write_to_file()   
 
 
