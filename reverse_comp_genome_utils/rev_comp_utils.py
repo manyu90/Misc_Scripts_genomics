@@ -1,3 +1,7 @@
+#Creates a reverse complemented version of the genome. 
+#Reads the bcolz file for the mapped genome and reverse complements it
+
+
 from genomelake.backend import load_directory, _array_writer
 import numpy as np
 import os
