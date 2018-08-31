@@ -1,0 +1,87 @@
+INFO  @ Thu, 30 Aug 2018 20:32:49: 
+# Command line: callpeak -t /oak/stanford/groups/akundaje/manyu/DNAseSeq_data/2018-08-11-Arabidopsis-DNAse/03-Arabidopsis-DNAse-GSE53324/DS20427_DNaseI-seq_open_flowers-GSM1289380/all.1x36mers.unique.pseudoRep1.bam -f BAM -n /oak/stanford/groups/akundaje/manyu/DNAseSeq_data/2018-08-11-Arabidopsis-DNAse/03-Arabidopsis-DNAse-GSE53324/DS20427_DNaseI-seq_open_flowers-GSM1289380/macs.pr1 -g hs -p 0.01 --nomodel --shift -75 --extsize 150 -B --SPMR --keep-dup all --call-summits
+# ARGUMENTS LIST:
+# name = /oak/stanford/groups/akundaje/manyu/DNAseSeq_data/2018-08-11-Arabidopsis-DNAse/03-Arabidopsis-DNAse-GSE53324/DS20427_DNaseI-seq_open_flowers-GSM1289380/macs.pr1
+# format = BAM
+# ChIP-seq file = ['/oak/stanford/groups/akundaje/manyu/DNAseSeq_data/2018-08-11-Arabidopsis-DNAse/03-Arabidopsis-DNAse-GSE53324/DS20427_DNaseI-seq_open_flowers-GSM1289380/all.1x36mers.unique.pseudoRep1.bam']
+# control file = None
+# effective genome size = 2.70e+09
+# band width = 300
+# model fold = [5, 50]
+# pvalue cutoff = 1.00e-02
+# qvalue will not be calculated and reported as -1 in the final output.
+# Larger dataset will be scaled towards smaller dataset.
+# Range for calculating regional lambda is: 10000 bps
+# Broad region calling is off
+# Paired-End mode is off
+# Searching for subpeak summits is on
+# MACS will save fragment pileup signal per million reads
+ 
+INFO  @ Thu, 30 Aug 2018 20:32:49: #1 read tag files... 
+INFO  @ Thu, 30 Aug 2018 20:32:49: #1 read treatment tags... 
+INFO  @ Thu, 30 Aug 2018 20:32:52:  1000000 
+INFO  @ Thu, 30 Aug 2018 20:32:55:  2000000 
+INFO  @ Thu, 30 Aug 2018 20:32:58:  3000000 
+INFO  @ Thu, 30 Aug 2018 20:33:01:  4000000 
+INFO  @ Thu, 30 Aug 2018 20:33:04:  5000000 
+INFO  @ Thu, 30 Aug 2018 20:33:07:  6000000 
+INFO  @ Thu, 30 Aug 2018 20:33:07: #1 tag size is determined as 36 bps 
+INFO  @ Thu, 30 Aug 2018 20:33:07: #1 tag size = 36 
+INFO  @ Thu, 30 Aug 2018 20:33:07: #1  total tags in treatment: 6120064 
+INFO  @ Thu, 30 Aug 2018 20:33:07: #1 finished! 
+INFO  @ Thu, 30 Aug 2018 20:33:07: #2 Build Peak Model... 
+INFO  @ Thu, 30 Aug 2018 20:33:07: #2 Skipped... 
+INFO  @ Thu, 30 Aug 2018 20:33:07: #2 Sequencing ends will be shifted towards 5' by 75 bp(s) 
+INFO  @ Thu, 30 Aug 2018 20:33:07: #2 Use 150 as fragment length 
+INFO  @ Thu, 30 Aug 2018 20:33:07: #3 Call peaks... 
+INFO  @ Thu, 30 Aug 2018 20:33:07: #3 Going to call summits inside each peak ... 
+INFO  @ Thu, 30 Aug 2018 20:33:07: #3 Call peaks with given -log10pvalue cutoff: 2.00000 ... 
+INFO  @ Thu, 30 Aug 2018 20:33:07: #3 Pre-compute pvalue-qvalue table... 
+INFO  @ Thu, 30 Aug 2018 20:33:33: #3 In the peak calling step, the following will be performed simultaneously: 
+INFO  @ Thu, 30 Aug 2018 20:33:33: #3   Write bedGraph files for treatment pileup (after scaling if necessary)... /oak/stanford/groups/akundaje/manyu/DNAseSeq_data/2018-08-11-Arabidopsis-DNAse/03-Arabidopsis-DNAse-GSE53324/DS20427_DNaseI-seq_open_flowers-GSM1289380/macs.pr1_treat_pileup.bdg 
+INFO  @ Thu, 30 Aug 2018 20:33:33: #3   Write bedGraph files for control lambda (after scaling if necessary)... /oak/stanford/groups/akundaje/manyu/DNAseSeq_data/2018-08-11-Arabidopsis-DNAse/03-Arabidopsis-DNAse-GSE53324/DS20427_DNaseI-seq_open_flowers-GSM1289380/macs.pr1_control_lambda.bdg 
+INFO  @ Thu, 30 Aug 2018 20:33:33: #3   --SPMR is requested, so pileup will be normalized by sequencing depth in million reads. 
+INFO  @ Thu, 30 Aug 2018 20:33:33: #3 Call peaks for each chromosome... 
+INFO  @ Thu, 30 Aug 2018 20:34:01: #4 Write output xls file... /oak/stanford/groups/akundaje/manyu/DNAseSeq_data/2018-08-11-Arabidopsis-DNAse/03-Arabidopsis-DNAse-GSE53324/DS20427_DNaseI-seq_open_flowers-GSM1289380/macs.pr1_peaks.xls 
+INFO  @ Thu, 30 Aug 2018 20:34:01: #4 Write peak in narrowPeak format file... /oak/stanford/groups/akundaje/manyu/DNAseSeq_data/2018-08-11-Arabidopsis-DNAse/03-Arabidopsis-DNAse-GSE53324/DS20427_DNaseI-seq_open_flowers-GSM1289380/macs.pr1_peaks.narrowPeak 
+INFO  @ Thu, 30 Aug 2018 20:34:01: #4 Write summits bed file... /oak/stanford/groups/akundaje/manyu/DNAseSeq_data/2018-08-11-Arabidopsis-DNAse/03-Arabidopsis-DNAse-GSE53324/DS20427_DNaseI-seq_open_flowers-GSM1289380/macs.pr1_summits.bed 
+INFO  @ Thu, 30 Aug 2018 20:34:01: Done! 
+INFO  @ Thu, 30 Aug 2018 20:34:02: 
+# Command line: callpeak -t /oak/stanford/groups/akundaje/manyu/DNAseSeq_data/2018-08-11-Arabidopsis-DNAse/03-Arabidopsis-DNAse-GSE53324/DS20427_DNaseI-seq_open_flowers-GSM1289380/all.1x36mers.unique.pseudoRep2.bam -f BAM -n /oak/stanford/groups/akundaje/manyu/DNAseSeq_data/2018-08-11-Arabidopsis-DNAse/03-Arabidopsis-DNAse-GSE53324/DS20427_DNaseI-seq_open_flowers-GSM1289380/macs.pr2 -g hs -p 0.01 --nomodel --shift -75 --extsize 150 -B --SPMR --keep-dup all --call-summits
+# ARGUMENTS LIST:
+# name = /oak/stanford/groups/akundaje/manyu/DNAseSeq_data/2018-08-11-Arabidopsis-DNAse/03-Arabidopsis-DNAse-GSE53324/DS20427_DNaseI-seq_open_flowers-GSM1289380/macs.pr2
+# format = BAM
+# ChIP-seq file = ['/oak/stanford/groups/akundaje/manyu/DNAseSeq_data/2018-08-11-Arabidopsis-DNAse/03-Arabidopsis-DNAse-GSE53324/DS20427_DNaseI-seq_open_flowers-GSM1289380/all.1x36mers.unique.pseudoRep2.bam']
+# control file = None
+# effective genome size = 2.70e+09
+# band width = 300
+# model fold = [5, 50]
+# pvalue cutoff = 1.00e-02
+# qvalue will not be calculated and reported as -1 in the final output.
+# Larger dataset will be scaled towards smaller dataset.
+# Range for calculating regional lambda is: 10000 bps
+# Broad region calling is off
+# Paired-End mode is off
+# Searching for subpeak summits is on
+# MACS will save fragment pileup signal per million reads
+ 
+INFO  @ Thu, 30 Aug 2018 20:34:02: #1 read tag files... 
+INFO  @ Thu, 30 Aug 2018 20:34:02: #1 read treatment tags... 
+INFO  @ Thu, 30 Aug 2018 20:34:05:  1000000 
+INFO  @ Thu, 30 Aug 2018 20:34:08:  2000000 
+INFO  @ Thu, 30 Aug 2018 20:34:11:  3000000 
+INFO  @ Thu, 30 Aug 2018 20:34:14:  4000000 
+INFO  @ Thu, 30 Aug 2018 20:34:17:  5000000 
+INFO  @ Thu, 30 Aug 2018 20:34:20:  6000000 
+INFO  @ Thu, 30 Aug 2018 20:34:20: #1 tag size is determined as 36 bps 
+INFO  @ Thu, 30 Aug 2018 20:34:20: #1 tag size = 36 
+INFO  @ Thu, 30 Aug 2018 20:34:20: #1  total tags in treatment: 6124312 
+INFO  @ Thu, 30 Aug 2018 20:34:20: #1 finished! 
+INFO  @ Thu, 30 Aug 2018 20:34:20: #2 Build Peak Model... 
+INFO  @ Thu, 30 Aug 2018 20:34:20: #2 Skipped... 
+INFO  @ Thu, 30 Aug 2018 20:34:20: #2 Sequencing ends will be shifted towards 5' by 75 bp(s) 
+INFO  @ Thu, 30 Aug 2018 20:34:20: #2 Use 150 as fragment length 
+INFO  @ Thu, 30 Aug 2018 20:34:20: #3 Call peaks... 
+INFO  @ Thu, 30 Aug 2018 20:34:20: #3 Going to call summits inside each peak ... 
+INFO  @ Thu, 30 Aug 2018 20:34:20: #3 Call peaks with given -log10pvalue cutoff: 2.00000 ... 
+INFO  @ Thu, 30 Aug 2018 20:34:20: #3 Pre-compute pvalue-qvalue table... 

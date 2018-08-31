@@ -1,0 +1,23 @@
+INFO  @ Thu, 30 Aug 2018 20:34:16: 
+# Command line: callpeak -t /oak/stanford/groups/akundaje/manyu/DNAseSeq_data/2018-08-11-Arabidopsis-DNAse/01-Arabidopsis-DNAse-GSE53322/DS22138_PE_DNaseI-seq_7_day_old_seedling_Dark-GSM1289357/all.2x36mers.unique.pseudoRep1.bam -f BAM -n /oak/stanford/groups/akundaje/manyu/DNAseSeq_data/2018-08-11-Arabidopsis-DNAse/01-Arabidopsis-DNAse-GSE53322/DS22138_PE_DNaseI-seq_7_day_old_seedling_Dark-GSM1289357/macs.pr1 -g hs -p 0.01 --nomodel --shift -75 --extsize 150 -B --SPMR --keep-dup all --call-summits
+# ARGUMENTS LIST:
+# name = /oak/stanford/groups/akundaje/manyu/DNAseSeq_data/2018-08-11-Arabidopsis-DNAse/01-Arabidopsis-DNAse-GSE53322/DS22138_PE_DNaseI-seq_7_day_old_seedling_Dark-GSM1289357/macs.pr1
+# format = BAM
+# ChIP-seq file = ['/oak/stanford/groups/akundaje/manyu/DNAseSeq_data/2018-08-11-Arabidopsis-DNAse/01-Arabidopsis-DNAse-GSE53322/DS22138_PE_DNaseI-seq_7_day_old_seedling_Dark-GSM1289357/all.2x36mers.unique.pseudoRep1.bam']
+# control file = None
+# effective genome size = 2.70e+09
+# band width = 300
+# model fold = [5, 50]
+# pvalue cutoff = 1.00e-02
+# qvalue will not be calculated and reported as -1 in the final output.
+# Larger dataset will be scaled towards smaller dataset.
+# Range for calculating regional lambda is: 10000 bps
+# Broad region calling is off
+# Paired-End mode is off
+# Searching for subpeak summits is on
+# MACS will save fragment pileup signal per million reads
+ 
+INFO  @ Thu, 30 Aug 2018 20:34:16: #1 read tag files... 
+INFO  @ Thu, 30 Aug 2018 20:34:16: #1 read treatment tags... 
+INFO  @ Thu, 30 Aug 2018 20:34:18:  1000000 
+INFO  @ Thu, 30 Aug 2018 20:34:21:  2000000 

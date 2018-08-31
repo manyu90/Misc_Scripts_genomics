@@ -1,0 +1,92 @@
+INFO  @ Thu, 30 Aug 2018 20:31:49: 
+# Command line: callpeak -t /oak/stanford/groups/akundaje/manyu/DNAseSeq_data/2018-08-11-Arabidopsis-DNAse/01-Arabidopsis-DNAse-GSE53322/DS22138_SE_DNaseI-seq_7_day_old_seedling_Dark-GSM1289356/all.1x36mers.unique.pseudoRep1.bam -f BAM -n /oak/stanford/groups/akundaje/manyu/DNAseSeq_data/2018-08-11-Arabidopsis-DNAse/01-Arabidopsis-DNAse-GSE53322/DS22138_SE_DNaseI-seq_7_day_old_seedling_Dark-GSM1289356/macs.pr1 -g hs -p 0.01 --nomodel --shift -75 --extsize 150 -B --SPMR --keep-dup all --call-summits
+# ARGUMENTS LIST:
+# name = /oak/stanford/groups/akundaje/manyu/DNAseSeq_data/2018-08-11-Arabidopsis-DNAse/01-Arabidopsis-DNAse-GSE53322/DS22138_SE_DNaseI-seq_7_day_old_seedling_Dark-GSM1289356/macs.pr1
+# format = BAM
+# ChIP-seq file = ['/oak/stanford/groups/akundaje/manyu/DNAseSeq_data/2018-08-11-Arabidopsis-DNAse/01-Arabidopsis-DNAse-GSE53322/DS22138_SE_DNaseI-seq_7_day_old_seedling_Dark-GSM1289356/all.1x36mers.unique.pseudoRep1.bam']
+# control file = None
+# effective genome size = 2.70e+09
+# band width = 300
+# model fold = [5, 50]
+# pvalue cutoff = 1.00e-02
+# qvalue will not be calculated and reported as -1 in the final output.
+# Larger dataset will be scaled towards smaller dataset.
+# Range for calculating regional lambda is: 10000 bps
+# Broad region calling is off
+# Paired-End mode is off
+# Searching for subpeak summits is on
+# MACS will save fragment pileup signal per million reads
+ 
+INFO  @ Thu, 30 Aug 2018 20:31:49: #1 read tag files... 
+INFO  @ Thu, 30 Aug 2018 20:31:49: #1 read treatment tags... 
+INFO  @ Thu, 30 Aug 2018 20:31:53:  1000000 
+INFO  @ Thu, 30 Aug 2018 20:31:55: #1 tag size is determined as 36 bps 
+INFO  @ Thu, 30 Aug 2018 20:31:55: #1 tag size = 36 
+INFO  @ Thu, 30 Aug 2018 20:31:55: #1  total tags in treatment: 1590575 
+INFO  @ Thu, 30 Aug 2018 20:31:55: #1 finished! 
+INFO  @ Thu, 30 Aug 2018 20:31:55: #2 Build Peak Model... 
+INFO  @ Thu, 30 Aug 2018 20:31:55: #2 Skipped... 
+INFO  @ Thu, 30 Aug 2018 20:31:55: #2 Sequencing ends will be shifted towards 5' by 75 bp(s) 
+INFO  @ Thu, 30 Aug 2018 20:31:55: #2 Use 150 as fragment length 
+INFO  @ Thu, 30 Aug 2018 20:31:55: #3 Call peaks... 
+INFO  @ Thu, 30 Aug 2018 20:31:55: #3 Going to call summits inside each peak ... 
+INFO  @ Thu, 30 Aug 2018 20:31:55: #3 Call peaks with given -log10pvalue cutoff: 2.00000 ... 
+INFO  @ Thu, 30 Aug 2018 20:31:55: #3 Pre-compute pvalue-qvalue table... 
+INFO  @ Thu, 30 Aug 2018 20:32:00: #3 In the peak calling step, the following will be performed simultaneously: 
+INFO  @ Thu, 30 Aug 2018 20:32:00: #3   Write bedGraph files for treatment pileup (after scaling if necessary)... /oak/stanford/groups/akundaje/manyu/DNAseSeq_data/2018-08-11-Arabidopsis-DNAse/01-Arabidopsis-DNAse-GSE53322/DS22138_SE_DNaseI-seq_7_day_old_seedling_Dark-GSM1289356/macs.pr1_treat_pileup.bdg 
+INFO  @ Thu, 30 Aug 2018 20:32:00: #3   Write bedGraph files for control lambda (after scaling if necessary)... /oak/stanford/groups/akundaje/manyu/DNAseSeq_data/2018-08-11-Arabidopsis-DNAse/01-Arabidopsis-DNAse-GSE53322/DS22138_SE_DNaseI-seq_7_day_old_seedling_Dark-GSM1289356/macs.pr1_control_lambda.bdg 
+INFO  @ Thu, 30 Aug 2018 20:32:00: #3   --SPMR is requested, so pileup will be normalized by sequencing depth in million reads. 
+INFO  @ Thu, 30 Aug 2018 20:32:00: #3 Call peaks for each chromosome... 
+INFO  @ Thu, 30 Aug 2018 20:32:16: #4 Write output xls file... /oak/stanford/groups/akundaje/manyu/DNAseSeq_data/2018-08-11-Arabidopsis-DNAse/01-Arabidopsis-DNAse-GSE53322/DS22138_SE_DNaseI-seq_7_day_old_seedling_Dark-GSM1289356/macs.pr1_peaks.xls 
+INFO  @ Thu, 30 Aug 2018 20:32:16: #4 Write peak in narrowPeak format file... /oak/stanford/groups/akundaje/manyu/DNAseSeq_data/2018-08-11-Arabidopsis-DNAse/01-Arabidopsis-DNAse-GSE53322/DS22138_SE_DNaseI-seq_7_day_old_seedling_Dark-GSM1289356/macs.pr1_peaks.narrowPeak 
+INFO  @ Thu, 30 Aug 2018 20:32:16: #4 Write summits bed file... /oak/stanford/groups/akundaje/manyu/DNAseSeq_data/2018-08-11-Arabidopsis-DNAse/01-Arabidopsis-DNAse-GSE53322/DS22138_SE_DNaseI-seq_7_day_old_seedling_Dark-GSM1289356/macs.pr1_summits.bed 
+INFO  @ Thu, 30 Aug 2018 20:32:16: Done! 
+INFO  @ Thu, 30 Aug 2018 20:32:17: 
+# Command line: callpeak -t /oak/stanford/groups/akundaje/manyu/DNAseSeq_data/2018-08-11-Arabidopsis-DNAse/01-Arabidopsis-DNAse-GSE53322/DS22138_SE_DNaseI-seq_7_day_old_seedling_Dark-GSM1289356/all.1x36mers.unique.pseudoRep2.bam -f BAM -n /oak/stanford/groups/akundaje/manyu/DNAseSeq_data/2018-08-11-Arabidopsis-DNAse/01-Arabidopsis-DNAse-GSE53322/DS22138_SE_DNaseI-seq_7_day_old_seedling_Dark-GSM1289356/macs.pr2 -g hs -p 0.01 --nomodel --shift -75 --extsize 150 -B --SPMR --keep-dup all --call-summits
+# ARGUMENTS LIST:
+# name = /oak/stanford/groups/akundaje/manyu/DNAseSeq_data/2018-08-11-Arabidopsis-DNAse/01-Arabidopsis-DNAse-GSE53322/DS22138_SE_DNaseI-seq_7_day_old_seedling_Dark-GSM1289356/macs.pr2
+# format = BAM
+# ChIP-seq file = ['/oak/stanford/groups/akundaje/manyu/DNAseSeq_data/2018-08-11-Arabidopsis-DNAse/01-Arabidopsis-DNAse-GSE53322/DS22138_SE_DNaseI-seq_7_day_old_seedling_Dark-GSM1289356/all.1x36mers.unique.pseudoRep2.bam']
+# control file = None
+# effective genome size = 2.70e+09
+# band width = 300
+# model fold = [5, 50]
+# pvalue cutoff = 1.00e-02
+# qvalue will not be calculated and reported as -1 in the final output.
+# Larger dataset will be scaled towards smaller dataset.
+# Range for calculating regional lambda is: 10000 bps
+# Broad region calling is off
+# Paired-End mode is off
+# Searching for subpeak summits is on
+# MACS will save fragment pileup signal per million reads
+ 
+INFO  @ Thu, 30 Aug 2018 20:32:17: #1 read tag files... 
+INFO  @ Thu, 30 Aug 2018 20:32:17: #1 read treatment tags... 
+INFO  @ Thu, 30 Aug 2018 20:32:21:  1000000 
+INFO  @ Thu, 30 Aug 2018 20:32:23: #1 tag size is determined as 36 bps 
+INFO  @ Thu, 30 Aug 2018 20:32:23: #1 tag size = 36 
+INFO  @ Thu, 30 Aug 2018 20:32:23: #1  total tags in treatment: 1593434 
+INFO  @ Thu, 30 Aug 2018 20:32:23: #1 finished! 
+INFO  @ Thu, 30 Aug 2018 20:32:23: #2 Build Peak Model... 
+INFO  @ Thu, 30 Aug 2018 20:32:23: #2 Skipped... 
+INFO  @ Thu, 30 Aug 2018 20:32:23: #2 Sequencing ends will be shifted towards 5' by 75 bp(s) 
+INFO  @ Thu, 30 Aug 2018 20:32:23: #2 Use 150 as fragment length 
+INFO  @ Thu, 30 Aug 2018 20:32:23: #3 Call peaks... 
+INFO  @ Thu, 30 Aug 2018 20:32:23: #3 Going to call summits inside each peak ... 
+INFO  @ Thu, 30 Aug 2018 20:32:23: #3 Call peaks with given -log10pvalue cutoff: 2.00000 ... 
+INFO  @ Thu, 30 Aug 2018 20:32:23: #3 Pre-compute pvalue-qvalue table... 
+INFO  @ Thu, 30 Aug 2018 20:32:28: #3 In the peak calling step, the following will be performed simultaneously: 
+INFO  @ Thu, 30 Aug 2018 20:32:28: #3   Write bedGraph files for treatment pileup (after scaling if necessary)... /oak/stanford/groups/akundaje/manyu/DNAseSeq_data/2018-08-11-Arabidopsis-DNAse/01-Arabidopsis-DNAse-GSE53322/DS22138_SE_DNaseI-seq_7_day_old_seedling_Dark-GSM1289356/macs.pr2_treat_pileup.bdg 
+INFO  @ Thu, 30 Aug 2018 20:32:28: #3   Write bedGraph files for control lambda (after scaling if necessary)... /oak/stanford/groups/akundaje/manyu/DNAseSeq_data/2018-08-11-Arabidopsis-DNAse/01-Arabidopsis-DNAse-GSE53322/DS22138_SE_DNaseI-seq_7_day_old_seedling_Dark-GSM1289356/macs.pr2_control_lambda.bdg 
+INFO  @ Thu, 30 Aug 2018 20:32:28: #3   --SPMR is requested, so pileup will be normalized by sequencing depth in million reads. 
+INFO  @ Thu, 30 Aug 2018 20:32:28: #3 Call peaks for each chromosome... 
+INFO  @ Thu, 30 Aug 2018 20:32:44: #4 Write output xls file... /oak/stanford/groups/akundaje/manyu/DNAseSeq_data/2018-08-11-Arabidopsis-DNAse/01-Arabidopsis-DNAse-GSE53322/DS22138_SE_DNaseI-seq_7_day_old_seedling_Dark-GSM1289356/macs.pr2_peaks.xls 
+INFO  @ Thu, 30 Aug 2018 20:32:44: #4 Write peak in narrowPeak format file... /oak/stanford/groups/akundaje/manyu/DNAseSeq_data/2018-08-11-Arabidopsis-DNAse/01-Arabidopsis-DNAse-GSE53322/DS22138_SE_DNaseI-seq_7_day_old_seedling_Dark-GSM1289356/macs.pr2_peaks.narrowPeak 
+INFO  @ Thu, 30 Aug 2018 20:32:45: #4 Write summits bed file... /oak/stanford/groups/akundaje/manyu/DNAseSeq_data/2018-08-11-Arabidopsis-DNAse/01-Arabidopsis-DNAse-GSE53322/DS22138_SE_DNaseI-seq_7_day_old_seedling_Dark-GSM1289356/macs.pr2_summits.bed 
+INFO  @ Thu, 30 Aug 2018 20:32:45: Done! 
+Initial parameter values: [0.10 1.00 0.20 0.50]
+Final parameter values: [0.84 1.40 0.78 0.72]
+Number of reported peaks - 13199/13199 (100.0%)
+
+Number of peaks passing IDR cutoff of 0.1 - 6030/13199 (45.7%)
+
