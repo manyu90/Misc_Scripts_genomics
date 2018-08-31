@@ -7,7 +7,7 @@ echo "starting idr"
 #echo "Done idr"
 echo "starting thresholds"
 
-idr_thresh_transformed=$(awk -v p=0.1 'BEGIN{print -log(p)/log(10)})'
+idr_thresh_transformed=$(awk -v p=0.1 'BEGIN{print -log(p)/log(10)}')
 awk 'BEGIN{OFS="\t"} $12>='"${idr_thresh_transformed}"' {if ($2<0) $2=0; print $1,$2,$3,$4,$5,$6,$7,$8,$9,$10}' IDR-GM12878.macs2| sort | uniq | sort -k7n,7n | gzip -nc > IDR-GM12878.macs2.IDR_1e-1.narrowPeak.gz
 
 echo "done threholds"
