@@ -47,7 +47,7 @@ def run():
         outfile = open(outfilename,'w')
         outfile.write('#!/bin/bash' + '\n')
         outfile.write('#SBATCH --job-name=' + prefix + '-' + str(i) + '\n')
-        outfile.write('#SBATCH --workdir="{}"'.format(os.path.join(os.getcwd(),new_dir_name))+'\n')
+        outfile.write('#SBATCH --chdir="{}"'.format(os.path.join(os.getcwd(),new_dir_name))+'\n')
         outfile.write('#SBATCH --output=' + prefix + '.' + str(i) + '.out' '\n')
         outfile.write('#SBATCH --error=' + prefix + '.' + str(i) + '.err' '\n')
         outfile.write('#SBATCH --time=' + walltime + '\n')
